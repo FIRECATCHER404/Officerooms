@@ -1,4 +1,5 @@
 @echo off
-git init
+if not exist .git (
+  git init
+)
 git add .
-
