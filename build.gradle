@@ -1,0 +1,35 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+group = 'com.officerooms'
+version = '0.1.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    gdxVersion = '1.12.1'
+}
+
+dependencies {
+    implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    runtimeOnly "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}
+
+application {
+    mainClass = 'com.officerooms.backrooms.DesktopLauncher'
+}
+
+tasks.named('run', JavaExec) {
+    workingDir = projectDir
+}

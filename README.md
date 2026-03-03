@@ -1,11 +1,28 @@
 # Officerooms
-A java-based game simulating the backrooms but with a more office-building vibe.
-Features:
 
- Generation:
-  Procedural, randomly seeded
- 
- Structures:
-  Computer lab
-  <img width="1598" height="894" alt="image" src="https://github.com/user-attachments/assets/08f240d2-3a88-4ca0-9594-0b6097ccc258" />
+A Java + LibGDX first-person Office-Backrooms experience.
 
+## Features
+
+- Procedural, randomly seeded runs
+- Hallway-focused fluorescent lighting with wall occlusion
+- Computer lab structure with old PCs, desk, and chairs
+- Raycast shader renderer with post-processing
+- Collision, mouse-look, and WASD movement
+
+## Run
+
+1. Install JDK 17+
+2. Run:
+
+```bash
+gradlew.bat run
+```
+
+## Controls
+
+- `W A S D`: move
+- Mouse: look around
+- `R`: generate a new seeded run
+- `H`: toggle HUD
+- `Esc`: quit
